@@ -2,7 +2,7 @@ QT app front-end for interacting with https://github.com/DyadicSolutions/StateSp
 
 To install
 ```
-pip install pip install git+https://github.com/DyadicSolutions/StateSpaceGridApp
+pip install git+https://github.com/DyadicSolutions/StateSpaceGridApp
 ```
 To run after installing
 ```
