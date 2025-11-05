@@ -46,7 +46,6 @@ class TrajectoryRowWidget(PySide6.QtWidgets.QWidget):
     """
     def __init__(self, data: model.DataObjectHolder):
         super().__init__()
-        print(f"Title: {data.filename}")
         self.interior_layout = PySide6.QtWidgets.QHBoxLayout(self)
         TitleWidget(self.interior_layout, str(data.filename))
         self.interior_layout.addStretch()
@@ -82,9 +81,7 @@ class TrajectoryListWidget(PySide6.QtWidgets.QScrollArea):
             self.traj_data_rows.append(TrajectoryRowWidget(self.vbox, traj_data))
 
     def reset(self):
-        print("reset")
         for row in self.traj_data_rows:
-            print("deleting row")
             self.vbox.removeWidget(row)
             row.deleteLater()
         self.traj_data_rows.clear()
